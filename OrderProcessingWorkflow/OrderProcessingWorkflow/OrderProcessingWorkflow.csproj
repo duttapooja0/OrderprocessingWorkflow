@@ -132,6 +132,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\BookHelper.cs" />
+    <Compile Include="Helpers\MembershipHelper.cs" />
     <Compile Include="Helpers\MethodHelper.cs" />
     <Compile Include="Helpers\PaymentTaskHelper.cs" />
     <Compile Include="Helpers\ProductHelper.cs" />

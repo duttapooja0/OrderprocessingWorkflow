@@ -34,7 +34,9 @@ namespace OrderProcessingWorkflow.Controllers
                     case "Book":
                         var paymentResult = methodHelper.ProcessBookPayment(paymenttaskList);
                         return Json(paymentResult, JsonRequestBehavior.AllowGet);
-                    case "Membership": break;
+                    case "Membership":
+                        paymentResult = methodHelper.ProcessMembershipActivation(paymenttaskList);
+                        return Json(paymentResult, JsonRequestBehavior.AllowGet);
                     case "MembershipUpgrade": break;
                     case "Video": break;
                     case "Physical": break;
