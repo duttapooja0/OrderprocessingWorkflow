@@ -43,7 +43,9 @@ namespace OrderProcessingWorkflow.Controllers
                     case "Video":
                         paymentResult = methodHelper.ProcessVideoPayment(paymenttaskList);
                         return Json(paymentResult, JsonRequestBehavior.AllowGet);
-                    case "Physical": break;
+                    case "Physical":
+                        paymentResult = methodHelper.ProcessPhysicalPayment(paymenttaskList);
+                        return Json(paymentResult, JsonRequestBehavior.AllowGet);
                 }
 
             }
