@@ -131,7 +131,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\BookHelper.cs" />
     <Compile Include="Helpers\MethodHelper.cs" />
+    <Compile Include="Helpers\PaymentTaskHelper.cs" />
     <Compile Include="Helpers\ProductHelper.cs" />
     <Compile Include="Migrations\202007161352067_AddedProductMaster.cs" />
     <Compile Include="Migrations\202007161352067_AddedProductMaster.designer.cs">
@@ -146,6 +148,7 @@
     <Compile Include="Models\PaymentTaskMaster.cs" />
     <Compile Include="Models\ProductMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\PaymentResultModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />

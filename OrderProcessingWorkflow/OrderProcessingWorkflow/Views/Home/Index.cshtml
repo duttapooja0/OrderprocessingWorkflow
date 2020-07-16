@@ -11,7 +11,7 @@
 
             </div>
             <div class="col-6">
-                <input type="submit" class="btn btn-primary" value="Make Payment" />
+                <a href="#" class="btn btn-primary" id="make-payment">Make Payment</a>
             </div>
         </form>
     </div>
@@ -21,15 +21,18 @@
 </div>
 <script type="text/javascript">
     $(function () {
-        $('#payment-form').submit(function () {
-            var paymentType = $('#payment-type').val();
+        $('#make-payment').click(function () {
+            var productType = $('#payment-type').val();
+            var productName = $("#payment-type option:selected").text();
             $.ajax({
-                url: "/Home/ProcessPayment?paymentType=" + paymentType,
+                url: "/Home/ProcessPayment?productType=" + productType + "&productName=" + productName,
                 type: "GET",
                 success: function (result) {
+                    console.log(result);
                     if (result != null) {
+
                         for (var i = 0; i < result.length; i++) {
-                            $('#payment-process-status').html('<p class="text-success">'+result.text+'</p>')
+                            $('#payment-process-status').append('<p class="text-success">' + result[i].text + '</p>');
                         }
                     }
                 },

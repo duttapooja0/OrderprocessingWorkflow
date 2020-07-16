@@ -24,9 +24,24 @@ namespace OrderProcessingWorkflow.Controllers
         }
         
 
-        public ActionResult About()
+        public ActionResult ProcessPayment(Guid productType,string productName)
         {
-            ViewBag.Message = "Your application description page.";
+            if (productType != Guid.Empty && !String.IsNullOrEmpty(productName))
+            {
+                var paymenttaskList = methodHelper.GetPaymentTasksByProd(productType);
+                switch (productName)
+                {
+                    case "Book":
+                        var paymentResult = methodHelper.ProcessBookPayment(paymenttaskList);
+                        return Json(paymentResult, JsonRequestBehavior.AllowGet);
+                    case "Membership": break;
+                    case "MembershipUpgrade": break;
+                    case "Video": break;
+                    case "Physical": break;
+                }
+
+            }
+            
 
             return View();
         }
