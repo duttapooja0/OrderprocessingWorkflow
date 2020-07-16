@@ -135,7 +135,9 @@
     <Compile Include="Helpers\MembershipHelper.cs" />
     <Compile Include="Helpers\MethodHelper.cs" />
     <Compile Include="Helpers\PaymentTaskHelper.cs" />
+    <Compile Include="Helpers\PhysicalAssetHelper.cs" />
     <Compile Include="Helpers\ProductHelper.cs" />
+    <Compile Include="Helpers\VideoHelper.cs" />
     <Compile Include="Migrations\202007161352067_AddedProductMaster.cs" />
     <Compile Include="Migrations\202007161352067_AddedProductMaster.designer.cs">
       <DependentUpon>202007161352067_AddedProductMaster.cs</DependentUpon>

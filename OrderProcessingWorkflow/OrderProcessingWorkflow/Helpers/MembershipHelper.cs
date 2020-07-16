@@ -48,7 +48,7 @@ namespace OrderProcessingWorkflow.Helpers
                     switch (item.TaskName)
                     {
                         case "Upgrade":
-                            paymentResultModel.text = "Membership activated!!";
+                            paymentResultModel.text = "Membership upgraded!!";
                             paymentResultModelsList.Add(paymentResultModel);
                             break;
                         case "SendEmail":
