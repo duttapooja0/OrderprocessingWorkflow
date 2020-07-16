@@ -37,8 +37,12 @@ namespace OrderProcessingWorkflow.Controllers
                     case "Membership":
                         paymentResult = methodHelper.ProcessMembershipActivation(paymenttaskList);
                         return Json(paymentResult, JsonRequestBehavior.AllowGet);
-                    case "MembershipUpgrade": break;
-                    case "Video": break;
+                    case "MembershipUpgrade":
+                        paymentResult = methodHelper.ProcessMembershipUpgrade(paymenttaskList);
+                        return Json(paymentResult, JsonRequestBehavior.AllowGet);
+                    case "Video":
+                        paymentResult = methodHelper.ProcessVideoPayment(paymenttaskList);
+                        return Json(paymentResult, JsonRequestBehavior.AllowGet);
                     case "Physical": break;
                 }
 
