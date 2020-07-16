@@ -131,6 +131,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\MethodHelper.cs" />
+    <Compile Include="Helpers\ProductHelper.cs" />
     <Compile Include="Migrations\202007161352067_AddedProductMaster.cs" />
     <Compile Include="Migrations\202007161352067_AddedProductMaster.designer.cs">
       <DependentUpon>202007161352067_AddedProductMaster.cs</DependentUpon>

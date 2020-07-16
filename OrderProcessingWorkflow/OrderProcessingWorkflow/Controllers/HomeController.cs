@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OrderProcessingWorkflow.Helpers;
+using OrderProcessingWorkflow.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,19 @@ namespace OrderProcessingWorkflow.Controllers
 {
     public class HomeController : Controller
     {
+        OPWDbContext dbContext;
+        MethodHelper methodHelper;
+        public HomeController()
+        {
+            dbContext = new OPWDbContext();
+            methodHelper = new MethodHelper();
+        }
         public ActionResult Index()
         {
+            ViewBag.ProductList = methodHelper.GetProductList();
             return View();
         }
+        
 
         public ActionResult About()
         {
